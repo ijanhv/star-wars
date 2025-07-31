@@ -19,7 +19,33 @@ const MovieDetails: React.FC<MovieDetailsProps> = ({ movie }) => {
         </p>
       ));
   };
-
+  const details = [
+    {
+      label: "CHARACTERS",
+      count: movie.characters.length,
+      color: "text-yellow-400",
+    },
+    {
+      label: "PLANETS",
+      count: movie.planets.length,
+      color: "text-green-400",
+    },
+    {
+      label: "STARSHIPS",
+      count: movie.starships.length,
+      color: "text-blue-400",
+    },
+    {
+      label: "VEHICLES",
+      count: movie.vehicles.length,
+      color: "text-purple-400",
+    },
+    {
+      label: "SPECIES",
+      count: movie.species.length,
+      color: "text-pink-400",
+    },
+  ];
   return (
     <div className="min-h-screen  relative overflow-hidden">
       {/* Nebula effects */}
@@ -70,7 +96,6 @@ const MovieDetails: React.FC<MovieDetailsProps> = ({ movie }) => {
             </div>
           </div>
 
-          {/* Movie Poster Section */}
           <div className="p-8">
             {/* Movie Details Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -116,33 +141,7 @@ const MovieDetails: React.FC<MovieDetailsProps> = ({ movie }) => {
                   GALAXY STATISTICS
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {[
-                    {
-                      label: "CHARACTERS",
-                      count: movie.characters.length,
-                      color: "text-yellow-400",
-                    },
-                    {
-                      label: "PLANETS",
-                      count: movie.planets.length,
-                      color: "text-green-400",
-                    },
-                    {
-                      label: "STARSHIPS",
-                      count: movie.starships.length,
-                      color: "text-blue-400",
-                    },
-                    {
-                      label: "VEHICLES",
-                      count: movie.vehicles.length,
-                      color: "text-purple-400",
-                    },
-                    {
-                      label: "SPECIES",
-                      count: movie.species.length,
-                      color: "text-pink-400",
-                    },
-                  ].map((stat, index) => (
+                  {details.map((stat, index) => (
                     <div
                       key={stat.label}
                       className="text-center p-4 bg-gray-800/50 rounded-lg border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -168,7 +167,7 @@ const MovieDetails: React.FC<MovieDetailsProps> = ({ movie }) => {
                 <h2 className="text-3xl font-bold text-yellow-400 mb-6 text-center tracking-wide">
                   OPENING CRAWL
                 </h2>
-                <div className="text-gray-300 text-lg leading-relaxed font-light tracking-wide max-w-4xl mx-auto">
+                <div className="text-gray-300 text-sm md:text-lg leading-relaxed font-light tracking-wide max-w-4xl mx-auto">
                   {formatOpeningCrawl(movie.opening_crawl)}
                 </div>
               </div>

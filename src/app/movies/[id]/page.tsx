@@ -8,10 +8,10 @@ import { Movie } from "@/lib/types";
 import { fetchMovieById } from "@/lib/api";
 import { useParams } from "next/navigation";
 
-const MoviePage: React.FC = ({}) => {
+const MoviePage: React.FC = () => {
   const params = useParams<{ id: string }>();
   const id = params.id;
-  console.log(params.id);
+
   const [movie, setMovie] = useState<Movie | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
