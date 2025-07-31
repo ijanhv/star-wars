@@ -1,8 +1,8 @@
 # 🌟 Star Wars Movies Listing
 
-A modern, responsive React application built with Next.js 14 and TypeScript that showcases the complete Star Wars movie saga. Features a beautiful, interactive interface with sorting capabilities, detailed movie information, and a mobile-first design approach.
+A modern, responsive React application built with Next.js 14 and TypeScript that showcases the Star Wars Movies. Features a beautiful, interactive interface with sorting capabilities, detailed movie information, and a mobile-first design approach.
 
-![Star Wars App Preview](https://via.placeholder.com/800x400/1f2937/FFE81F?text=Star+Wars+Movies+Database)
+<img width="2878" height="1674" alt="image" src="https://github.com/user-attachments/assets/0da9c087-2c7f-404e-bf9e-bc580288416f" />
 
 ## ✨ Features
 
@@ -10,7 +10,7 @@ A modern, responsive React application built with Next.js 14 and TypeScript that
 - **📋 Complete Movie Listing**: Display all Star Wars movies in an elegant, sortable table
 - **🔍 Detailed Movie Views**: Click any movie to see comprehensive details including opening crawls, cast statistics, and production info
 - **📱 Responsive Design**: Seamless experience across desktop, tablet, and mobile devices
-- **🎯 Smart Sorting**: Sort by episode number, title, director, or release date with visual indicators
+- **🎯 Sorting**: Sort by episode number, title, director, or release date with visual indicators
 
 ### Technical Highlights
 - **⚡ Next.js 14**: Latest App Router with TypeScript support
@@ -76,19 +76,18 @@ src/
 │       └── [id]/
 │           └── page.tsx   # Movie detail page
 ├── components/            # React components
-│   ├── ui/               # Reusable UI components
-│   │   ├── loading-spinner.tsx
-│   │   ├── error-boundary.tsx
-│   │   └── back-button.tsx
+│   ├   
+│   ├── loading-spinner.tsx
+│   ├──  error-boundary.tsx
+│   ├──back-button.tsx
 │   ├── movies-table.tsx  # Main movies table
 │   ├── movie-details.tsx # Movie detail view
-│   └── sort-button.tsx   # Sortable column header
+│   
 ├── lib/                  # Utilities and types
-│   ├── api.ts           # API functions
-│   ├── types.ts         # TypeScript interfaces
-│   └── utils.ts         # Helper functions
-└── hooks/               # Custom React hooks
-    └── use-movies.ts    # Data fetching hooks
+    ├── api.ts           # API functions
+    ├── types.ts         # TypeScript interfaces
+    └── utils.ts         # Helper functions
+
 ```
 
 ## 🎨 Design Philosophy
