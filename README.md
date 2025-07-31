@@ -104,24 +104,6 @@ src/
 - **Performance**: Optimized images, lazy loading, and efficient rendering
 - **Accessibility**: Screen reader friendly, keyboard navigation, proper contrast ratios
 
-## 📊 API Integration
-
-The app integrates with the Star Wars API (SWAPI) to fetch movie data. For development and demo purposes, it includes mock data based on the real API structure.
-
-### Switching to Live API
-To use the live API instead of mock data, uncomment the fetch logic in `src/lib/api.ts`:
-
-```typescript
-// Uncomment for production API calls
-const response = await fetch(`${BASE_URL}/films/`);
-if (!response.ok) {
-  throw new ApiError(
-    `Failed to fetch films: ${response.statusText}`,
-    response.status
-  );
-}
-return await response.json();
-```
 
 ## 🧪 Available Scripts
 
@@ -147,5 +129,4 @@ npm run start        # Start production server
 2. Connect your repository to Vercel
 3. Deploy automatically on every push
 
-### Other Platforms
-The app can be deployed to any platform that suppo
+
